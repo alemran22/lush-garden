@@ -3,9 +3,9 @@ import { GoHeartFill } from "react-icons/go";
 
 const Card = ({ image, title, netPrice, price }) => {
   return (
-    <div className="col-span-3 flex flex-col justify-center gap-5 shadow-md drop-shadow-md p-3 ">
+    <div className="col-span-12 md:col-span-3 flex flex-col justify-center gap-5 shadow-md drop-shadow-md p-3 ">
       {/* img */}
-      <div className="  relative ">
+      <div className="relative ">
         <img
           src={image}
           alt=""

@@ -2,15 +2,15 @@ import indoorImg from "../../assets/images/Indoor_Plant.png";
 import outdoorImg from "../../assets/images/Outdoor_Plant.png";
 const Help = () => {
   return (
-    <div className="max-w-7xl w-full mx-auto p-24 ">
+    <div className="max-w-7xl w-full mx-auto md:p-24 px-6 pt-10 ">
       {/* text section */}
-      <div className="flex flex-row justify-between gap-12 ">
-        <div className="w-[45%]">
-          <h2 className="text-4xl text-green">
+      <div className="flex flex-col md:flex-row justify-between gap-5 md:gap-12 ">
+        <div className="w-full md:w-[45%]">
+          <h2 className="text-2xl md:text-4xl text-green text-center">
             We Help To Choose The Most Suitable Plants For You
           </h2>
         </div>
-        <div className="w-[55%]">
+        <div className="w-full md:w-[55%]">
           <p className="text-base font-medium">
             Our selection includes a wide variety of flowers, from classic roses
             to exotic orchids, as well as a variety of lush indoor and outdoor
@@ -21,7 +21,7 @@ const Help = () => {
         </div>
       </div>
       {/* card section */}
-      <div className="flex flex-row justify-between gap-10 mt-20">
+      <div className="flex flex-col md:flex-row justify-between gap-10 mt-20">
         <div className="w-full flex flex-col p-7 ">
           <img src={indoorImg} alt="" className="h-[95px] w-[61px]" />
           <p className="text-xl font-black my-5">Indoor Plants</p>

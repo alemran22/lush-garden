@@ -6,14 +6,14 @@ import quality4 from "../../assets/images/Pruning.png";
 
 const QualityProduct = () => {
   return (
-    <div className="md:max-w-7xl mx-auto px-3 md:px-0 my-5 md:my-32 flex flex-row">
-      <div className="md:w-6/12 mb-5 md:block hidden">
+    <div className="md:max-w-7xl mx-auto px-3 md:px-0 my-5 md:my-32 flex flex-col md:flex-row">
+      <div className="md:w-6/12 mb-5 ">
         <img src={leftImage} alt="" className="h-full w-full " />
       </div>
       <div className="md:w-6/12">
         <div className="flex flex-row items-center justify-center">
           {/* cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 ml-3 ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:ml-3 ">
             {/* card1 */}
             <div className="p-10 bg-[#cfcfcf] rounded-lg shadow-md flex flex-col items-center md:items-start gap-5">
               <div className="">
