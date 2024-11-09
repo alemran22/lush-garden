@@ -1,7 +1,9 @@
 import { RxHamburgerMenu } from "react-icons/rx";
 import logoImg from "../../../assets/images/Mask group.png";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [hamburgerMenu, setHamburgerMenu] = useState(false);
   return (
     <div className="">
       {/* desktop & tab */}
@@ -37,11 +39,38 @@ const Navbar = () => {
       {/* mobile */}
       <div className="md:hidden flex flex-row justify-between items-center px-3 py-5">
         {/* hamburger menu */}
-        <div className="">
+        <div onClick={() => setHamburgerMenu(!hamburgerMenu)} className="">
           <RxHamburgerMenu className="h-10 w-10 text-white" />
         </div>
+        {/* mobile menu item */}
+        {hamburgerMenu && (
+          <div className="">
+            <div className="md:hidden inset-y-0 bg-gray-800 fixed w-9/12 left-0 z-30 flex flex-col justify-between">
+              <div className=" flex flex-col gap-1">
+                <ul className="menu menu-vertical px-1 gap-4 py-2 ">
+                  <li className="bg-green/50 text-white font-black rounded-lg">
+                    <a className="hover:underline">Home</a>
+                  </li>
+                  <li className="bg-green/50 text-white font-black rounded-lg">
+                    <a className="hover:underline">About Us</a>
+                  </li>
+                  <li className="bg-green/50 text-white font-black rounded-lg">
+                    <a className="hover:underline">Planters</a>
+                  </li>
+                  <li className="bg-green/50 text-white font-black rounded-lg">
+                    <a className="hover:underline">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              onClick={() => setHamburgerMenu(!hamburgerMenu)}
+              className="md:hidden inset-0 bg-gray-300 fixed right-0 z-20"
+            ></div>
+          </div>
+        )}
         {/* mid */}
-        <div className="">
+        <div>
           <img src={logoImg} alt="" className="" />
         </div>
         {/* right */}
